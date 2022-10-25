@@ -35,7 +35,7 @@ class RecentPhotosTableViewController: UITableViewController, UISearchResultsUpd
     
     // MARK: - FUNCTİONS
     private func fetchRecentPhotos() {
-        guard let url = URL(string: "https://www.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=f7b6ba9875ba31e309e741d9a5a42230&format=json&nojsoncallback=1&extras=description,owner_name,icon_server,url_n,url_z") else {return}
+        guard let url = URL(string: "API KEY") else {return}
         
         let request = URLRequest(url: url)
         URLSession.shared.dataTask(with: request) { (data,response,error) in
@@ -50,7 +50,7 @@ class RecentPhotosTableViewController: UITableViewController, UISearchResultsUpd
     }
     
     private func searchPhotos(with text: String) {
-        guard let url = URL(string: "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=7dd89640e14551c5df5f7bbae1f68223&text=\(text)&format=json&nojsoncallback=1&extras=description,owner_name,icon_server,url_n,url_z") else {return}
+        guard let url = URL(string: "API KEY") else {return}
         
         let request = URLRequest(url: url)
         URLSession.shared.dataTask(with: request) { (data,response,error) in
